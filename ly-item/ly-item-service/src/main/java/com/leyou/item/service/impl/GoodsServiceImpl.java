@@ -103,6 +103,7 @@ public class GoodsServiceImpl implements GoodsService {
         // 新增spuDetail
         SpuDetail spuDetail = spu.getSpuDetail();
         spuDetail.setSpuId(spu.getId());
+        String s="";
         // 新增sku
 
         // 新增库存
