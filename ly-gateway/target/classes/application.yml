@@ -1,0 +1,38 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    # 网关从eureka拉取服务的时长，默认30秒
+    # registry-fetch-interval-seconds: 30
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+zuul:
+  prefix: /api # 添加路由前缀
+  routes:
+    # 从eureka中查找到item-service服务，将路径前带/item的地址转发到item-service服务
+    # 将商品微服务映射到/item/**
+    item-service: /item/**
+
+    upload-service:
+      path: /upload/**
+      serviceId: upload-service
+      # 不去除前缀
+      strip-prefix: false
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000 # 熔断超时时长 5000ms
+ribbon:
+  ConnectTimeout: 1000 # ribbon超时时长
+  ReadTimeout: 3500 # ribbon读取超时时长
+  MaxAutoRetries: 0 # 当前服务重试次数
+  MaxAutoRetriesNextServer: 0 # 切换服务器重试次数，默认为1次，可以在AbstractRibbonCommand中查找
