@@ -1,7 +1,11 @@
 package com.leyou.item.service;
 
 import com.leyou.common.vo.PageResultVO;
+import com.leyou.item.pojo.Sku;
 import com.leyou.item.pojo.Spu;
+import com.leyou.item.pojo.SpuDetail;
+
+import java.util.List;
 
 /**
  * GoodsService
@@ -25,4 +29,24 @@ public interface GoodsService {
      * @param spu
      */
     void saveGoods(Spu spu);
+
+    /**
+     * 根据spuId查询商品详情SpuDetail
+     * @param spuId
+     * @return
+     */
+    SpuDetail querySpuDetailBySpuId(Long spuId);
+
+    /**
+     * 根据spuId查询下面所有的sku
+     * @param spuId
+     * @return
+     */
+    List<Sku> querySkuBySpuId(Long spuId);
+
+    /**
+     * 修改商品
+     * @param spu
+     */
+    void updateGoods(Spu spu);
 }

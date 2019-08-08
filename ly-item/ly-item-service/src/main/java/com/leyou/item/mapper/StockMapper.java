@@ -1,8 +1,8 @@
 package com.leyou.item.mapper;
 
+import com.leyou.common.mapper.BaseMapper;
 import com.leyou.item.pojo.Stock;
 import org.springframework.stereotype.Repository;
-import tk.mybatis.mapper.common.Mapper;
 
 /**
  * StockMapper
@@ -11,5 +11,5 @@ import tk.mybatis.mapper.common.Mapper;
  * @date 2019/8/4 18:08
  */
 @Repository
-public interface StockMapper extends Mapper<Stock> {
+public interface StockMapper extends BaseMapper<Stock, Long> {
 }
