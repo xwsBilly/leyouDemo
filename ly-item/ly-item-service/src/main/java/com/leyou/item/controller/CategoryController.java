@@ -28,4 +28,14 @@ public class CategoryController {
         // return ResponseEntity.status(HttpStatus.OK).body(null);
         return ResponseEntity.ok(categoryService.queryCategoryListByPid(pid));
     }
+
+    /**
+     * 根据多个id查询商品分类
+     * @param ids
+     * @return
+     */
+    @GetMapping("/list/ids")
+    public ResponseEntity<List<Category>> queryCategoryByIds(@RequestParam("ids") List<Long> ids){
+        return ResponseEntity.ok(categoryService.queryByIds(ids));
+    }
 }

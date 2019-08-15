@@ -1,0 +1,27 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+      cluster-name: elasticsearch
+  # 多个接口上的@FeignClient(“相同服务名”)会报错，overriding is disabled
+  # Feign有一个局限性，即对于同一个service-id只能使用一个配置类，
+  # 如果有多个@FeignClient注解使用了相同的name属性，则注解的configuration参数会被覆盖。
+  # 至于谁覆盖谁要看Spring容器初始化Bean的顺序
+  # 如果需要使用不同的配置类，则需要手动一一配置
+  main:
+    allow-bean-definition-overriding: true
+  # 默认属性的排除，non_null即排除为空的属性
+  jackson:
+    default-property-inclusion: non_null
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1

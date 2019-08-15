@@ -18,6 +18,7 @@ zuul:
     # 从eureka中查找到item-service服务，将路径前带/item的地址转发到item-service服务
     # 将商品微服务映射到/item/**
     item-service: /item/**
+    search-service: /search/**
 
     upload-service:
       path: /upload/**
