@@ -49,4 +49,14 @@ public class SpecificationController {
             @RequestParam(value = "searching", required = false) Boolean searching) {
         return ResponseEntity.ok(specificationService.querySpecParamList(gid, cid, searching));
     }
+
+    /**
+     * 根据商品分类id，查询规格参数组
+     * @param cid
+     * @return
+     */
+    @GetMapping("/group")
+    public ResponseEntity<List<SpecGroup>> querySpecGroupAllByCid(@RequestParam("cid") Long cid){
+        return ResponseEntity.ok(specificationService.querySpecGroupAllByCid(cid));
+    }
 }

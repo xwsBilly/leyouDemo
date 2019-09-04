@@ -28,6 +28,7 @@ public enum ExceptionEnum {
     BRAND_SAVE_ERROR(500, "新增品牌失败"),
     CATEGORY_BRAND_SAVE_ERROR(500, "新增品牌分类中间表失败"),
     SAVE_GOODS_ERROR(500, "新增商品失败"),
+    SEND_RABBITMQ_ERROR(500, "发送rabbitMQ消息出错"),
     UPDATE_GOODS_ERROR(500, "修改商品失败")
     ;
     private int code;

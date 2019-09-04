@@ -8,6 +8,26 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    virtual-host: /leyou
+    # 模板，amqpTemplate
+    template:
+      retry:
+        # 开启重试
+        enabled: true
+        # 重试周期
+        initial-interval: 10000ms
+        # 最大重试周期
+        max-interval: 30000ms
+        # 第一次是10秒，第二次就是10*2秒，第三次是10*2*2秒，但是不超过最大重试周期
+        multiplier: 2
+      # rabbitMQ交换机默认值
+      exchange: ly.item.exchange
+    # 生产者确认，生产者发送失败，重新发送
+    publisher-confirms: true
 eureka:
   client:
     service-url:

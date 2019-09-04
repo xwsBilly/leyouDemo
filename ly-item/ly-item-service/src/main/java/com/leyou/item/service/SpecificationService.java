@@ -2,6 +2,8 @@ package com.leyou.item.service;
 
 import com.leyou.item.pojo.SpecGroup;
 import com.leyou.item.pojo.SpecParam;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -29,4 +31,12 @@ public interface SpecificationService {
      * @return
      */
     List<SpecParam> querySpecParamList(Long gid, Long cid, Boolean searching);
+
+    /**
+     * 根据商品分类id，查询规格参数组
+     * @param cid
+     * @return
+     */
+    @GetMapping("/spec/group")
+    List<SpecGroup> querySpecGroupAllByCid(@RequestParam("cid") Long cid);
 }

@@ -1,5 +1,7 @@
 package com.leyou.search.pojo;
 
+import java.util.Map;
+
 /**
  * SearchRequest
  *
@@ -11,14 +13,19 @@ public class SearchRequest {
      * 关键字
      */
     private String key;
+
     /**
      * 当前页
      */
     private Integer page;
+
+    private Map<String,String > filter;
+
     /**
      * 默认查询数量
      */
     public static final int DEFAULT_SIZE = 20;
+
     /**
      * 默认查询页码
      */
@@ -46,5 +53,13 @@ public class SearchRequest {
 
     public int getDefaultSize() {
         return DEFAULT_SIZE;
+    }
+
+    public Map<String, String> getFilter() {
+        return filter;
+    }
+
+    public void setFilter(Map<String, String> filter) {
+        this.filter = filter;
     }
 }

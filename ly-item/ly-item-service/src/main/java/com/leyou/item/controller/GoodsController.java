@@ -82,4 +82,14 @@ public class GoodsController {
     public ResponseEntity<List<Sku>> querySkuBySpuId(@RequestParam("id") Long spuId){
         return ResponseEntity.ok(goodsService.querySkuBySpuId(spuId));
     }
+
+    /**
+     * 根据spuId查询spu
+     * @param id
+     * @return
+     */
+    @GetMapping("/spu/{id}")
+    public ResponseEntity<Spu> querySpuById(@PathVariable("id") Long id){
+        return ResponseEntity.ok(goodsService.querySpuById(id));
+    }
 }

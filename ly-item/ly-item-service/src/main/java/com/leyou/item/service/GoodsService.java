@@ -49,4 +49,11 @@ public interface GoodsService {
      * @param spu
      */
     void updateGoods(Spu spu);
+
+    /**
+     * 根据spuId查询spu
+     * @param id
+     * @return
+     */
+    Spu querySpuById(Long id);
 }

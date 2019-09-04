@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+    <h1>
+        <span th:text="${msg}"></span>
+        <span th:text="${#dates.format(#dates.createNow(),'yyyy-MM-dd')}"></span>
+    </h1>
+    <span th:utext="'<font color=\'red\'>hello</font>'"></span>
+    <!--字面值-->
+    <span th:text="200*10"></span>
+</body>
+</html>

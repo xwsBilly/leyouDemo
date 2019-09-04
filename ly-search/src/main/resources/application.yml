@@ -17,6 +17,11 @@ spring:
   # 默认属性的排除，non_null即排除为空的属性
   jackson:
     default-property-inclusion: non_null
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    virtual-host: /leyou
 eureka:
   client:
     service-url:

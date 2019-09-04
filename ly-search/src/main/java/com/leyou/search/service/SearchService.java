@@ -17,4 +17,16 @@ public interface SearchService {
      * @return
      */
     PageResultVO<Goods> search(SearchRequest searchRequest);
+
+    /**
+     * 接受MQ消息，创建或修改索引库
+     * @param spuId
+     */
+    void createOrUpdateIndex(Long spuId);
+
+    /**
+     * 接受MQ消息，删除索引库中的索引
+     * @param spuId
+     */
+    void deleteIndex(Long spuId);
 }

@@ -14,6 +14,7 @@ import com.leyou.item.service.BrandService;
 import com.leyou.item.service.CategoryService;
 import com.leyou.item.service.GoodsService;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,6 +49,9 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Autowired
     private StockMapper stockMapper;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
     @Override
     public PageResultVO<Spu> querySpuByPage(Integer page, Integer rows, Boolean saleable, String key) {
@@ -112,6 +116,15 @@ public class GoodsServiceImpl implements GoodsService {
         spuDetailMapper.insert(spuDetail);
         // 新增sku和库存
         saveSkuAndStock(spu);
+
+        try {
+            // 发送MQ消息
+            amqpTemplate.convertAndSend("item.insert",spu.getId());
+        }catch (Exception e){
+            System.out.println("发送MQ消息出错，" + e);
+            throw new MyException(ExceptionEnum.SEND_RABBITMQ_ERROR);
+        }
+
     }
 
     private void saveSkuAndStock(Spu spu) {
@@ -214,5 +227,29 @@ public class GoodsServiceImpl implements GoodsService {
         }
         // 新增sku和stock
         saveSkuAndStock(spu);
+
+        try {
+            // 发送MQ消息
+            amqpTemplate.convertAndSend("item.update",spu.getId());
+        }catch (Exception e){
+            System.out.println("发送MQ消息出错，" + e);
+            throw new MyException(ExceptionEnum.SEND_RABBITMQ_ERROR);
+        }
+    }
+
+    @Override
+    public Spu querySpuById(Long id) {
+        // 查询spu
+        Spu spu = spuMapper.selectByPrimaryKey(id);
+        if (spu == null) {
+            throw new MyException(ExceptionEnum.GOODS_NOT_FOUND);
+        }
+
+        // 查询sku
+        spu.setSkus(querySkuBySpuId(id));
+
+        // 查询detail
+        spu.setSpuDetail(querySpuDetailBySpuId(id));
+        return spu;
     }
 }

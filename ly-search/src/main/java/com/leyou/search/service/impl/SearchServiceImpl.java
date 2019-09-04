@@ -1,4 +1,4 @@
-package com.leyou.search.service;
+package com.leyou.search.service.impl;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.leyou.common.enums.ExceptionEnum;
@@ -13,19 +13,30 @@ import com.leyou.search.client.GoodsFeignClient;
 import com.leyou.search.client.SpecificationFeignClient;
 import com.leyou.search.pojo.Goods;
 import com.leyou.search.pojo.SearchRequest;
+import com.leyou.search.pojo.SearchResult;
 import com.leyou.search.pojo.SkuDTO;
 import com.leyou.search.repository.GoodsRepository;
+import com.leyou.search.service.SearchService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.MatchQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.aggregations.Aggregation;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.Aggregations;
+import org.elasticsearch.search.aggregations.bucket.terms.LongTerms;
+import org.elasticsearch.search.aggregations.bucket.terms.StringTerms;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
+import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
 import org.springframework.data.elasticsearch.core.query.FetchSourceFilter;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.awt.print.Pageable;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -35,6 +46,8 @@ import java.util.stream.Collectors;
  * @author xieweisong
  * @date 2019/8/13 14:18
  */
+
+@Slf4j
 @Service
 public class SearchServiceImpl implements SearchService {
     @Autowired
@@ -51,6 +64,9 @@ public class SearchServiceImpl implements SearchService {
 
     @Autowired
     private GoodsRepository goodsRepository;
+
+    @Autowired
+    private ElasticsearchTemplate template;
 
     public Goods buildGoods(Spu spu) {
         // 查询分类
@@ -200,18 +216,137 @@ public class SearchServiceImpl implements SearchService {
         int size = searchRequest.getDefaultSize();
         // 创建查询构建器
         NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder();
-        // 结果过滤
+        // 0 结果过滤
         nativeSearchQueryBuilder.withSourceFilter(new FetchSourceFilter(new String[]{"id", "subTitle", "skus"}, null));
-        // 分页
+        // 1 分页
         nativeSearchQueryBuilder.withPageable(PageRequest.of(page, size));
-        // 过滤
-        nativeSearchQueryBuilder.withQuery(QueryBuilders.matchQuery("all", searchRequest.getKey()));
-        // 查询
-        Page<Goods> result = goodsRepository.search(nativeSearchQueryBuilder.build());
-        // 解析结果
+        // 2 过滤
+        // QueryBuilder basicQuery = QueryBuilders.matchQuery("all", searchRequest.getKey());
+        QueryBuilder basicQuery = buildBasicQuery(searchRequest);
+        nativeSearchQueryBuilder.withQuery(basicQuery);
+        // 3 聚合分类和品牌信息
+        // 3.1 聚合分类
+        String categoryAggName = "category_agg";
+        nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms(categoryAggName).field("cid3"));
+        // 3.2 聚合品牌
+        String brandAggName = "brand_agg";
+        nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms(brandAggName).field("brandId"));
+
+        // 4 查询
+        // Page<Goods> result = goodsRepository.search(nativeSearchQueryBuilder.build());
+
+        // 使用聚合查询需要用到ElasticsearchTemplate
+        AggregatedPage<Goods> result = template.queryForPage(nativeSearchQueryBuilder.build(), Goods.class);
+
+        // 5 解析结果
+        // 5.1 解析分页结果
         long total = result.getTotalElements();
         int totalPages = result.getTotalPages();
         List<Goods> content = result.getContent();
-        return new PageResultVO<>(total, totalPages, content);
+        // 5.2 解析聚合结果
+        Aggregations aggs = result.getAggregations();
+        List<Category> categories = parseCategoryAgg(aggs.get(categoryAggName));
+        List<Brand> brands = parseBrandAgg(aggs.get(brandAggName));
+
+        // return new PageResultVO<>(total, totalPages, content);
+        List<Map<String, Object>> specs = null;
+        if (categories != null && categories.size() == 1) {
+            // 商品分类存在并且数量为1，可以聚合参数
+            // 在原先搜索条件的基础上进行 聚合
+            specs = buildSpecificationAgg(categories.get(0).getId(), basicQuery);
+        }
+
+        // 6 完成规格参数聚合
+        return new SearchResult(total, totalPages, content, categories, brands, specs);
+    }
+
+    private QueryBuilder buildBasicQuery(SearchRequest searchRequest) {
+        // 创建布尔查询
+        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+        // 查询条件
+        boolQueryBuilder.must(QueryBuilders.matchQuery("all",searchRequest.getKey()));
+        // 过滤条件
+        Map<String, String> filter = searchRequest.getFilter();
+        for (Map.Entry<String, String> entry : filter.entrySet()) {
+            String key = entry.getKey();
+            // 处理key的情况,如果过是分类或者品牌时，不需要处理
+            if (!"cid3".equals(key)&&!"brandId".equals(key)){
+                key="specs."+key+".keyword";
+            }
+            String value = entry.getValue();
+            boolQueryBuilder.filter(QueryBuilders.termQuery(key,value));
+        }
+        return boolQueryBuilder;
+    }
+
+    private List<Map<String, Object>> buildSpecificationAgg(Long cid, QueryBuilder basicQuery) {
+        List<Map<String, Object>> specs = new ArrayList<>();
+        // 1 查询需要聚合的规格参数
+        List<SpecParam> params = specificationFeignClient.querySpecParamList(null, cid, true);
+        // 2 聚合
+        NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder();
+        // 2.1 带上查询条件
+        nativeSearchQueryBuilder.withQuery(basicQuery);
+        // 2.2 聚合
+        for (SpecParam param : params) {
+            String name = param.getName();
+            // 用规格参数名，作为聚合名
+            nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms(name).field("specs." + name + ".keyword"));
+        }
+        // 3 获取结果
+        AggregatedPage<Goods> result = template.queryForPage(nativeSearchQueryBuilder.build(), Goods.class);
+        // 4 解析结果
+        Aggregations aggregations = result.getAggregations();
+        for (SpecParam param : params) {
+            // 规格参数名称
+            String name = param.getName();
+            StringTerms terms = aggregations.get(name);
+            // 待选项
+            List<String> options = terms.getBuckets().stream().map(StringTerms.Bucket::getKeyAsString).collect(Collectors.toList());
+            // 准备map
+            Map<String, Object> map = new HashMap<>();
+            map.put("k", name);
+            map.put("options", options);
+            specs.add(map);
+        }
+
+        return specs;
+    }
+
+    private List<Brand> parseBrandAgg(LongTerms longTerms) {
+        try {
+            List<Long> ids = longTerms.getBuckets().stream().map(bucket -> bucket.getKeyAsNumber().longValue()).collect(Collectors.toList());
+            List<Brand> brands = brandFeignClient.queryBrandByIds(ids);
+            return brands;
+        } catch (Exception e) {
+            log.error("[搜索服务]查询品牌失败：", e);
+            return null;
+        }
+    }
+
+    private List<Category> parseCategoryAgg(LongTerms longTerms) {
+        try {
+            List<Long> ids = longTerms.getBuckets().stream().map(bucket -> bucket.getKeyAsNumber().longValue()).collect(Collectors.toList());
+            List<Category> categories = categoryFeignClient.queryCategoryByIds(ids);
+            return categories;
+        } catch (Exception e) {
+            log.error("[搜索服务]查询分类失败：", e);
+            return null;
+        }
+    }
+
+    @Override
+    public void createOrUpdateIndex(Long spuId) {
+        // 根据spuId查询spu
+        Spu spu = goodsFeignClient.querySpuById(spuId);
+        // 构建goods
+        Goods goods = buildGoods(spu);
+        // 存入索引库
+        goodsRepository.save(goods);
+    }
+
+    @Override
+    public void deleteIndex(Long spuId) {
+        goodsRepository.deleteById(spuId);
     }
 }

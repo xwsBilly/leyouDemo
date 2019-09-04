@@ -2,6 +2,8 @@ package com.leyou.item.service;
 
 import com.leyou.common.vo.PageResultVO;
 import com.leyou.item.pojo.Brand;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -41,4 +43,11 @@ public interface BrandService {
      * @return
      */
     List<Brand> queryBrandByCid(Long cid);
+
+    /**
+     * 根据多个品牌id查询品牌
+     * @param ids
+     * @return
+     */
+    List<Brand> queryBrandByIds(@RequestParam("ids") List<Long> ids);
 }

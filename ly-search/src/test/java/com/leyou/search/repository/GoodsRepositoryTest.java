@@ -4,7 +4,7 @@ import com.leyou.common.vo.PageResultVO;
 import com.leyou.item.pojo.Spu;
 import com.leyou.search.client.GoodsFeignClient;
 import com.leyou.search.pojo.Goods;
-import com.leyou.search.service.SearchServiceImpl;
+import com.leyou.search.service.impl.SearchServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
