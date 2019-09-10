@@ -53,7 +53,7 @@ public class SmsUtils {
      */
     public void sendSms(String phoneNumber, String signName, String templateCode, String templateParam) {
         String key = KEY_PREFIX + phoneNumber;
-        // TODO 按照手机号，限制短信流量
+        // 按照手机号，限制短信流量
         // 读取时间
         String lastTime = redisTemplate.opsForValue().get(key);
         if (StringUtils.isNotBlank(lastTime)) {
