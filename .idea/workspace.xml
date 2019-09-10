@@ -1,72 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7143d658-fef6-4eae-b80e-e5d2f5f44c3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/leyou.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/LyPageApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/client/BrandFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/client/CategoryFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/client/GoodsFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/client/SpecificationFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/controller/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/mq/ItemListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/service/PageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/java/com/leyou/page/service/impl/PageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-page/src/main/resources/templates/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/mq/ItemListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/pojo/SearchResult.java" afterDir="false" />
+    <list default="true" id="7143d658-fef6-4eae-b80e-e5d2f5f44c3a" name="Default Changelist" comment="leyou Demo">
+      <change afterPath="$PROJECT_DIR$/ly-sms/ly-sms.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/LySmsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/config/SmsProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/mq/SmsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/utils/SmsUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/src/test/java/com/leyou/test/RedisTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-sms/src/test/java/com/leyou/test/SmsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/ly-common.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/enums/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/enums/ExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/enums/ExceptionEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/enums/ExceptionEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-gateway/ly-gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-interface/ly-item-interface.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/api/BrandApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/api/BrandApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/api/GoodsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/api/GoodsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/api/SpecificationApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/api/SpecificationApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/pojo/SpecGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-interface/src/main/java/com/leyou/item/pojo/SpecGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-interface/target/classes/com/leyou/item/pojo/SpecGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-interface/target/classes/com/leyou/item/pojo/SpecGroup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/ly-item-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/controller/BrandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/controller/SpecificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/controller/SpecificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/mapper/BrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/mapper/BrandMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/BrandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/SpecificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/SpecificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/impl/BrandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/impl/GoodsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/impl/SpecificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/java/com/leyou/item/service/impl/SpecificationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/controller/BrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/controller/BrandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/controller/SpecificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/controller/SpecificationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/mapper/BrandMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/mapper/BrandMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/BrandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/BrandService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/GoodsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/SpecificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/SpecificationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/impl/BrandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/impl/BrandServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/impl/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/impl/GoodsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/impl/SpecificationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-item/ly-item-service/target/classes/com/leyou/item/service/impl/SpecificationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-item/ly-item.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-registry/ly-registry.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/ly-search.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-search/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/pojo/SearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/pojo/SearchRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/service/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-search/src/main/java/com/leyou/search/service/impl/SearchServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-search/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-search/src/test/java/com/leyou/search/repository/GoodsRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-search/src/test/java/com/leyou/search/repository/GoodsRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-upload/ly-upload.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,7 +95,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/ly-page/src/main/java/com/leyou" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -156,27 +103,28 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.leyou.search.repository" />
       <recent name="com.leyou.search.client" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.leyou.page.service.impl" />
+      <recent name="com.leyou.item.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.leyou.sms.mq" />
       <recent name="com.leyou.search.client" />
       <recent name="com.leyou.common.utils" />
       <recent name="com.leyou.item.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Billy\IdeaProjects\leyou\ly-page\src\main\java\com\leyou\page\client" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.leyou.page.service.impl" />
-      <recent name="com.leyou.item.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,7 +145,27 @@
     </option>
     <option name="contentProportion" value="0.19895498" />
   </component>
-  <component name="RunManager" selected="Spring Boot.LyRegistryApplication">
+  <component name="RunManager" selected="JUnit.RedisTest.testHash">
+    <configuration name="RedisTest.testHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ly-sms" />
+      <option name="PACKAGE_NAME" value="com.leyou.test" />
+      <option name="MAIN_CLASS_NAME" value="com.leyou.test.RedisTest" />
+      <option name="METHOD_NAME" value="testHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testRedis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ly-sms" />
+      <option name="PACKAGE_NAME" value="com.leyou.test" />
+      <option name="MAIN_CLASS_NAME" value="com.leyou.test.RedisTest" />
+      <option name="METHOD_NAME" value="testRedis" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LyGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ly-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.gateway.LyGatewayApplication" />
@@ -233,6 +201,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LySmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-sms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LySmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LyUploadApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ly-upload" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyUploadApplication" />
@@ -241,13 +216,22 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.RedisTest.testRedis" />
+      <item itemvalue="JUnit.RedisTest.testHash" />
       <item itemvalue="Spring Boot.LyGatewayApplication" />
       <item itemvalue="Spring Boot.LyItemApplication" />
       <item itemvalue="Spring Boot.LyRegistryApplication" />
       <item itemvalue="Spring Boot.LyUploadApplication" />
       <item itemvalue="Spring Boot.LySearchApplication" />
       <item itemvalue="Spring Boot.LyPageApplication" />
+      <item itemvalue="Spring Boot.LySmsApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RedisTest.testHash" />
+        <item itemvalue="JUnit.RedisTest.testRedis" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
@@ -268,6 +252,9 @@
         </treeState>
       </serviceView>
     </option>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -342,7 +329,14 @@
       <workItem from="1567581274400" duration="2440000" />
       <workItem from="1567583775628" duration="251000" />
       <workItem from="1567584049101" duration="104000" />
-      <workItem from="1567584192718" duration="2980000" />
+      <workItem from="1567584192718" duration="3283000" />
+      <workItem from="1567587726407" duration="1833000" />
+      <workItem from="1567646839568" duration="1266000" />
+      <workItem from="1567675012844" duration="529000" />
+      <workItem from="1567732782147" duration="1207000" />
+      <workItem from="1568010170395" duration="8882000" />
+      <workItem from="1568081626334" duration="71000" />
+      <workItem from="1568098412309" duration="788000" />
     </task>
     <task id="LOCAL-00001" summary="leyouDemo">
       <created>1564998059480</created>
@@ -379,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565853708151</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="leyou Demo">
+      <created>1567587282706</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567587282706</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
