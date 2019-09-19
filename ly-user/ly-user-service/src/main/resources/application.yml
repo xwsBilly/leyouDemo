@@ -1,0 +1,35 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/yun6?serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    virtual-host: /leyou
+  redis:
+    host: localhost
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+mybatis:
+  type-aliases-package: com.leyou.user.pojo
+
+ly:
+  user:
+    # rabbitmq交换机
+    exchange: ly.sms.exchange
+    # rabbitmq队列
+    queue: sms.verify.code
+    # redis过期时间
+    expireTime: 5

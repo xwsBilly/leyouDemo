@@ -12,9 +12,13 @@
     <file url="file://$PROJECT_DIR$/ly-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-sms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ly-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ly-user/ly-user-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ly-user/ly-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../xxx/funo-account/account-order-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../xxx/funo-account/check-bill-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../xxx/funo-account/file-manage-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../xxx/funo-account/finance-manage-service/src/main/resources/application.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../xxx/funo-account/marketing-case-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

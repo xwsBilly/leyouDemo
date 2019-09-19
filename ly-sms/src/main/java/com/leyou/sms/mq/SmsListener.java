@@ -1,6 +1,5 @@
 package com.leyou.sms.mq;
 
-import com.aliyuncs.exceptions.ClientException;
 import com.leyou.common.utils.JsonUtils;
 import com.leyou.sms.config.SmsProperties;
 import com.leyou.sms.utils.SmsUtils;

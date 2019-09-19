@@ -1,5 +1,6 @@
 package com.leyou.test;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class SmsTest {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
+    @Test
     public void testSendSms() {
         Map<String, String> msg = new HashMap<>();
         msg.put("phone","12345678900");

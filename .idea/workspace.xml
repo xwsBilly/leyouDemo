@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7143d658-fef6-4eae-b80e-e5d2f5f44c3a" name="Default Changelist" comment="leyou Demo">
-      <change afterPath="$PROJECT_DIR$/ly-sms/ly-sms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/LySmsApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/config/SmsProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/mq/SmsListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/utils/SmsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/src/test/java/com/leyou/test/RedisTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-sms/src/test/java/com/leyou/test/SmsTest.java" afterDir="false" />
+    <list default="true" id="7143d658-fef6-4eae-b80e-e5d2f5f44c3a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-interface/ly-user-interface.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-interface/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-interface/src/main/java/com/leyou/user/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-interface/src/main/java/com/leyou/user/pojo/UserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/ly-user-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/LyUserApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/config/UserProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/utils/CodecUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/test/java/com/leyou/user/service/Impl/UserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/ly-user.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-user/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/enums/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/enums/ExceptionEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/utils/NumberUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/utils/NumberUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/enums/ExceptionEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/enums/ExceptionEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/utils/NumberUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/utils/NumberUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/mq/SmsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou/sms/mq/SmsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-sms/src/test/java/com/leyou/test/SmsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-sms/src/test/java/com/leyou/test/SmsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,9 +65,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="HTML File" />
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -76,6 +92,7 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -96,26 +113,20 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/ly-sms/src/main/java/com/leyou" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../xxx/funo-account" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="spring.boot" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.leyou.user.service.Impl" />
       <recent name="com.leyou.search.repository" />
       <recent name="com.leyou.search.client" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.leyou.page.service.impl" />
-      <recent name="com.leyou.item.service" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.leyou.sms.mq" />
@@ -124,7 +135,15 @@
       <recent name="com.leyou.item.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Billy\IdeaProjects\leyou\ly-user\ly-user-service" />
       <recent name="C:\Users\Billy\IdeaProjects\leyou\ly-page\src\main\java\com\leyou\page\client" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.leyou.page.service.impl" />
+      <recent name="com.leyou.item.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -145,7 +164,7 @@
     </option>
     <option name="contentProportion" value="0.19895498" />
   </component>
-  <component name="RunManager" selected="JUnit.RedisTest.testHash">
+  <component name="RunManager" selected="JUnit.SmsTest.testSendSms">
     <configuration name="RedisTest.testHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ly-sms" />
       <option name="PACKAGE_NAME" value="com.leyou.test" />
@@ -161,6 +180,38 @@
       <option name="PACKAGE_NAME" value="com.leyou.test" />
       <option name="MAIN_CLASS_NAME" value="com.leyou.test.RedisTest" />
       <option name="METHOD_NAME" value="testRedis" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmsTest.testSendSms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ly-sms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leyou.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.leyou.test" />
+      <option name="MAIN_CLASS_NAME" value="com.leyou.test.SmsTest" />
+      <option name="METHOD_NAME" value="testSendSms" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.testRandom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ly-user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leyou.user.service.Impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.leyou.user.service.Impl" />
+      <option name="MAIN_CLASS_NAME" value="com.leyou.user.service.Impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testRandom" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,6 +266,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LyUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ly-user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.leyou.LyUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.RedisTest.testRedis" />
       <item itemvalue="JUnit.RedisTest.testHash" />
@@ -225,9 +283,14 @@
       <item itemvalue="Spring Boot.LySearchApplication" />
       <item itemvalue="Spring Boot.LyPageApplication" />
       <item itemvalue="Spring Boot.LySmsApplication" />
+      <item itemvalue="Spring Boot.LyUserApplication" />
+      <item itemvalue="JUnit.UserServiceImplTest.testRandom" />
+      <item itemvalue="JUnit.SmsTest.testSendSms" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SmsTest.testSendSms" />
+        <item itemvalue="JUnit.UserServiceImplTest.testRandom" />
         <item itemvalue="JUnit.RedisTest.testHash" />
         <item itemvalue="JUnit.RedisTest.testRedis" />
       </list>
@@ -240,12 +303,17 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6a3bca3b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d4fa1510" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6a3bca3b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@103b99fa" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d4fa1510" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c22b2770" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d4fa1510" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e1fe3ddc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -336,7 +404,11 @@
       <workItem from="1567732782147" duration="1207000" />
       <workItem from="1568010170395" duration="8882000" />
       <workItem from="1568081626334" duration="71000" />
-      <workItem from="1568098412309" duration="788000" />
+      <workItem from="1568098412309" duration="5239000" />
+      <workItem from="1568856895786" duration="1196000" />
+      <workItem from="1568860624331" duration="4271000" />
+      <workItem from="1568865826920" duration="620000" />
+      <workItem from="1568873465305" duration="11777000" />
     </task>
     <task id="LOCAL-00001" summary="leyouDemo">
       <created>1564998059480</created>
@@ -380,7 +452,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567587282706</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="leyou Demo">
+      <created>1568099422449</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568099422449</updated>
+    </task>
+    <task id="LOCAL-00008" summary="leyou Demo">
+      <created>1568099437789</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568099437789</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
