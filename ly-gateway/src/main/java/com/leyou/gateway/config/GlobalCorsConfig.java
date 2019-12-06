@@ -17,6 +17,7 @@ public class GlobalCorsConfig {
         CorsConfiguration config=new CorsConfiguration();
         // 1)允许的域，不要写*，否则cookie无法使用
         config.addAllowedOrigin("http://manage.leyou.com");
+        config.addAllowedOrigin("http://www.leyou.com");
         // 2)是否发送cookie信息
         config.setAllowCredentials(true);
         // 3)允许的请求方式

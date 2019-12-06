@@ -24,6 +24,13 @@ public class CookieUtils {
         return getCookieValue(request, cookieName, null);
     }
 
+    /**
+     * 得到Cookie的值
+     * @param request
+     * @param cookieName
+     * @param charset
+     * @return
+     */
     public static String getCookieValue(HttpServletRequest request, String cookieName, String charset) {
         Cookie[] cookieList = request.getCookies();
         if (cookieList == null || cookieName == null) {
@@ -50,7 +57,7 @@ public class CookieUtils {
         return new CookieBuilder(response);
     }
 
-    private static class CookieBuilder {
+    public static class CookieBuilder {
         private HttpServletRequest request;
         private HttpServletResponse response;
         private Integer maxAge;

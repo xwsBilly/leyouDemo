@@ -2,6 +2,7 @@ package com.leyou.user.service.Impl;
 
 import com.leyou.common.enums.ExceptionEnum;
 import com.leyou.common.exception.MyException;
+import com.leyou.common.utils.CookieUtils;
 import com.leyou.common.utils.NumberUtils;
 import com.leyou.user.config.UserProperties;
 import com.leyou.user.mapper.UserMapper;

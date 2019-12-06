@@ -20,12 +20,21 @@ zuul:
     item-service: /item/**
     search-service: /search/**
     user-service: /user/**
+    auth-service: /auth/**
 
     upload-service:
       path: /upload/**
       serviceId: upload-service
       # 不去除前缀
       strip-prefix: false
+  # 忽略 upload-service 服务
+  #ignored-services:
+  #  - upload-service
+
+  # 添加request请求头host
+  add-host-header: true
+  # 设置zuul敏感头部信息为null
+  sensitive-headers:
 hystrix:
   command:
     default:

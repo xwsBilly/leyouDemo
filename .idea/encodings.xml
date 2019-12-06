@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ly-authentication" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ly-authentication/ly-authentication-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ly-authentication/ly-authentication-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-item" charset="UTF-8" />
@@ -15,11 +18,10 @@
     <file url="file://$PROJECT_DIR$/ly-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-user/ly-user-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ly-user/ly-user-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../xxx/funo-account/account-order-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../xxx/funo-account/check-bill-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../xxx/funo-account/file-manage-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../xxx/funo-account/account-merchant-service/src/main/resources/application.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../xxx/funo-account/common-config-service/src/main/resources/application.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../xxx/funo-account/common-data-dict-service/src/main/resources/application.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../xxx/funo-account/finance-manage-service/src/main/resources/application.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../xxx/funo-account/marketing-case-service/src/main/resources/application-orcl.properties" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
