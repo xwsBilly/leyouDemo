@@ -2,40 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7143d658-fef6-4eae-b80e-e5d2f5f44c3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-common/src/main/java/com/leyou/auth/entity/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-common/src/main/java/com/leyou/auth/utils/JwtConstans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-common/src/main/java/com/leyou/auth/utils/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-common/src/main/java/com/leyou/auth/utils/ObjectUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-common/src/main/java/com/leyou/auth/utils/RsaUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-common/src/test/java/com/leyou/auth/test/JwtTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/src/main/java/com/leyou/auth/LyAuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/src/main/java/com/leyou/auth/client/UserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/src/main/java/com/leyou/auth/config/JwtProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/src/main/java/com/leyou/auth/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/src/main/java/com/leyou/auth/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/src/main/java/com/leyou/auth/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/ly-authentication.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-authentication/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ly-user/ly-user-interface/src/main/java/com/leyou/user/api/UserApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-gateway/src/main/java/com/leyou/gateway/config/FilterProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-gateway/src/main/java/com/leyou/gateway/config/JwtProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ly-gateway/src/main/java/com/leyou/gateway/filter/AuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/enums/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/enums/ExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/utils/CookieUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/src/main/java/com/leyou/common/utils/CookieUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/enums/ExceptionEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/enums/ExceptionEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/utils/CookieUtils$CookieBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/utils/CookieUtils$CookieBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/utils/CookieUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-common/target/classes/com/leyou/common/utils/CookieUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ly-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-gateway/src/main/java/com/leyou/gateway/config/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/src/main/java/com/leyou/gateway/config/GlobalCorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ly-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ly-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-user/ly-user-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ly-user/ly-user-interface/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ly-user/ly-user-service/src/main/java/com/leyou/user/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ly-gateway/target/classes/com/leyou/gateway/config/GlobalCorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/ly-gateway/target/classes/com/leyou/gateway/config/GlobalCorsConfig.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +100,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -133,7 +108,15 @@
       <recent name="com.leyou.search.repository" />
       <recent name="com.leyou.search.client" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.leyou.page.service.impl" />
+      <recent name="com.leyou.item.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.leyou.gateway.config" />
       <recent name="com.leyou.sms.mq" />
       <recent name="com.leyou.search.client" />
       <recent name="com.leyou.common.utils" />
@@ -142,13 +125,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Billy\IdeaProjects\leyou\ly-user\ly-user-service" />
       <recent name="C:\Users\Billy\IdeaProjects\leyou\ly-page\src\main\java\com\leyou\page\client" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.leyou.page.service.impl" />
-      <recent name="com.leyou.item.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -368,7 +344,7 @@
     <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Billy\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -472,7 +448,8 @@
       <workItem from="1575344841317" duration="263000" />
       <workItem from="1575533028113" duration="2525000" />
       <workItem from="1575535786127" duration="4198000" />
-      <workItem from="1575596426597" duration="2647000" />
+      <workItem from="1575596426597" duration="4276000" />
+      <workItem from="1575603159289" duration="5190000" />
     </task>
     <task id="LOCAL-00001" summary="leyouDemo">
       <created>1564998059480</created>
@@ -537,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568886876937</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="leyou Demo">
+      <created>1575600534448</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575600534448</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
